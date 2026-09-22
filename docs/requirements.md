@@ -60,7 +60,7 @@ The Calendar dimension must cover the complete date range.
 
 ### Delivery Log Business Rules
 
-- The delivery log dataset must contain exactly 500,000 rows.
+- The delivery log dataset must contain at least 500,000 rows.
 - Each delivery log must reference a valid campaign.
 - Each delivery log must reference a valid channel.
 - Campaigns with status `Scheduled` must not have delivery logs.
