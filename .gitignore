@@ -1,0 +1,31 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+# Generated datasets
+data/raw/*
+data/processed/*
+
+
+# Keep directories
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Power BI temporary files
+*.pbit.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

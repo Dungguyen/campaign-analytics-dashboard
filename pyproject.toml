@@ -1,0 +1,16 @@
+[project]
+name = "campaign-analytics-dashboard"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "faker>=40.39.0",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
