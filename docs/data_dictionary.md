@@ -74,3 +74,21 @@
 | month | integer | | No | Month number (1–12) |
 | quarter | string | | No | Quarter (Q1–Q4) |
 | year | integer | | No | Calendar year |
+
+
+## fact_delivery_log
+
+**Grain:** One row represents the delivery performance of one campaign
+through one channel at one send timestamp.
+
+| Column | Type | Key | Nullable | Description |
+|---|---|---|---|---|
+| delivery_log_id | string | PK | No | Unique identifier for each delivery log |
+| campaign_id | string | FK | No | References dim_campaign.campaign_id |
+| channel_id | integer | FK | No | References dim_channel.channel_id |
+| sent_at | datetime | | No | Timestamp when the campaign delivery occurred |
+| sent_date | date | FK | No | Date derived from sent_at and used to join dim_calendar |
+| sent | integer | | No | Number of delivery attempts |
+| delivered | integer | | No | Number of successfully delivered messages |
+| failed | integer | | No | Number of failed delivery attempts |
+| clicks | integer | | No | Number of clicks from delivered messages |

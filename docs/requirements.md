@@ -57,3 +57,22 @@ Synthetic data will cover:
 - End date: 2026-12-31
 
 The Calendar dimension must cover the complete date range.
+
+### Delivery Log Business Rules
+
+- The delivery log dataset must contain exactly 500,000 rows.
+- Each delivery log must reference a valid campaign.
+- Each delivery log must reference a valid channel.
+- Campaigns with status `Scheduled` must not have delivery logs.
+- A campaign may have delivery logs across multiple channels.
+- `sent_at` must be greater than or equal to the campaign's `scheduled_date`.
+- `sent_at` must not exceed the configured dataset end date.
+- `sent_date` must equal the date component of `sent_at`.
+- `sent` must be greater than or equal to 0.
+- `delivered` must be greater than or equal to 0.
+- `failed` must be greater than or equal to 0.
+- `clicks` must be greater than or equal to 0.
+- `delivered + failed` must equal `sent`.
+- `clicks` must not exceed `delivered`.
+- Channel selection, send volume, delivery rate, and CTR use configured synthetic distributions.
+- Campaign status affects delivery performance.
